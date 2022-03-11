@@ -1,20 +1,19 @@
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { L } from "leaflet";
+import useGeoLocation from "./useGeoLocation";
+import { useState, useEffect } from "react";
+import Map from "./Map";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <MapContainer className="map" center={[40.7192, -73.9617]} zoom={13}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[40.7192, -73.9617]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
+    <div className="soundathon">
+      <h6>Welcome to Soundathon!</h6>
+
+      {/* <Link to={"/map"}>Map</Link> */}
+      <Map />
+      <br />
     </div>
   );
 }
