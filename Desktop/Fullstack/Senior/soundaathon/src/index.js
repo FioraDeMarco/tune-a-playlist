@@ -11,7 +11,7 @@ import Routes from "./Routes";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <Routes />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

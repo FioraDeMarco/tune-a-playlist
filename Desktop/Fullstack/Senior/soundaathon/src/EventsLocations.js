@@ -1,4 +1,4 @@
-const eventsLocations = [
+export const eventsLocations = [
   {
     band: "Grey Day",
     venue: "Cutting-Room",

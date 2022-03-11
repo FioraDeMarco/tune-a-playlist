@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { useState, useEffect } from "react";
+import { eventsLocations } from "./EventsLocations";
 
 // const LeafIcon = L.Icon.extend({
 //   options: {
@@ -14,26 +15,26 @@ import { useState, useEffect } from "react";
 //   },
 // });
 
-const eventsLocations = [
-  {
-    band: "Grey Day",
-    venue: "Cutting-Room",
-    latitude: 40.74292,
-    longitude: -73.99052,
-  },
-  {
-    band: "Artic Donkeys",
-    venue: "Rockwood Music Hall",
-    latitude: 40.72234,
-    longitude: -73.98856,
-  },
-  {
-    band: "Peppers",
-    venue: "Music Hall of Williamsburg",
-    latitude: 40.7192,
-    longitude: -73.9617,
-  },
-];
+// const eventsLocations = [
+//   {
+//     band: "Grey Day",
+//     venue: "Cutting-Room",
+//     latitude: 40.74292,
+//     longitude: -73.99052,
+//   },
+//   {
+//     band: "Artic Donkeys",
+//     venue: "Rockwood Music Hall",
+//     latitude: 40.72234,
+//     longitude: -73.98856,
+//   },
+//   {
+//     band: "Peppers",
+//     venue: "Music Hall of Williamsburg",
+//     latitude: 40.7192,
+//     longitude: -73.9617,
+//   },
+// ];
 
 function Map() {
   // const map = useMap();
@@ -47,7 +48,7 @@ function Map() {
   //     map.setView([latitude, longitude], 13);
   //   });
   // }, [map]);
-  const location = useGeoLocation();
+  //const location = useGeoLocation();
 
   return (
     <div className="App">
@@ -56,61 +57,79 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[40.72234, -73.98856]}>
-          <Popup>
-            Soundathon Event
-            <br /> Artic Donkeys playing at Rockwood Music Hall at 8pm!
-          </Popup>
-        </Marker>
-
-        <Marker position={[40.74292, -73.99052]}>
-          <Popup>
-            Soundathon Event <br /> Grey Day playing at the Cutting Room tonight
-            at 9!
-          </Popup>
-        </Marker>
-        <Marker position={[40.7192, -73.9617]}>
-          <Popup>
-            Soundathon Event
-            <br /> 'Peppers' Playing at the Music Hall of Williamsburg tonight
-            5pm!
-          </Popup>
-        </Marker>
-        <Marker position={[40.7556, -73.9286]}>
-          <Popup>
-            Soundathon Event
-            <br /> Cage the Hamster Playing at the Peco's Wyckoff Avenue tonight
-            5pm!
-          </Popup>
-        </Marker>
-        <Marker position={[40.7253224, -73.9842582]}>
-          <Popup>
-            Soundathon Event
-            <br /> CBGB at the Peco's Wyckoff Avenue tonight 5pm!
-          </Popup>
-        </Marker>
-        <Marker position={[40.7253224, -73.9842582]}>
-          <Popup>
-            Soundathon Event
-            <br /> Rolling Tunes Playing at Rockwood Music Hall tonight 5pm!
-          </Popup>
-        </Marker>
-        {location.loaded && !location.error && (
-          <Marker
-            position={[location.coordinates.lat, location.coordinates.lng]}
-          >
-            <Popup>YOU ARE HERE</Popup>
-          </Marker>
-        )}
-        {/* <Marker position={[latitude, longitude]}>
-          <Popup>Home</Popup>
-        </Marker> */}
+        {eventsLocations.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue}
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
       </MapContainer>
-      {/* <Marker position={[latitude, longitude]}>
-        <Popup>Home</Popup>
-      </Marker> */}
     </div>
   );
 }
+
+// <Marker position={[40.72234, -73.98856]}>
+//   <Popup>
+//     Soundathon Event
+//     <br /> Artic Donkeys playing at Rockwood Music Hall at 8pm!
+//   </Popup>
+// </Marker>
+
+// <Marker position={[40.74292, -73.99052]}>
+//   <Popup>
+//     Soundathon Event <br /> Grey Day playing at the Cutting Room tonight
+//     at 9!
+//   </Popup>
+// </Marker>
+// <Marker position={[40.7192, -73.9617]}>
+//   <Popup>
+//     Soundathon Event
+//     <br /> 'Peppers' Playing at the Music Hall of Williamsburg tonight
+//     5pm!
+//   </Popup>
+// </Marker>
+// <Marker position={[40.7556, -73.9286]}>
+//   <Popup>
+//     Soundathon Event
+//     <br /> Cage the Hamster Playing at the Peco's Wyckoff Avenue tonight
+//     5pm!
+//   </Popup>
+// </Marker>
+// <Marker position={[40.7253224, -73.9842582]}>
+//   <Popup>
+//     Soundathon Event
+//     <br /> CBGB at the Peco's Wyckoff Avenue tonight 5pm!
+//   </Popup>
+// </Marker>
+// <Marker position={[40.7253224, -73.9842582]}>
+//   <Popup>
+//     Soundathon Event
+//     <br /> Rolling Tunes Playing at Rockwood Music Hall tonight 5pm!
+//   </Popup>
+// </Marker>
+// {location.loaded && !location.error && (
+//   <Marker
+//     position={[location.coordinates.lat, location.coordinates.lng]}
+//   >
+//     <Popup>YOU ARE HERE</Popup>
+//   </Marker>
+// )}
+// {/* <Marker position={[latitude, longitude]}>
+//   <Popup>Home</Popup>
+// </Marker> */}
+
+//       {/* <Marker position={[latitude, longitude]}>
+//         <Popup>Home</Popup>
+//       </Marker> */}
+
+//     )};
+// }
 
 export default Map;

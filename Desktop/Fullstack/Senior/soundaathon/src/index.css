@@ -13,14 +13,19 @@ code {
 }
 body {
   font-family: sans-serif;
-  /* background: url("https://pyxis.nymag.com/v1/imgs/1a0/d70/15535af3e89c90d627f4c19af4f74f2064-best-concert-venue-music-hall-of-william.2x.rsocial.w600.jpg"); */
-}
-.soundathon {
+  /* background: url("https://photos.app.goo.gl/NDMt9bp2Zhjdxnoj7"); */
+  height: 80vh;
+  background: url("https://www.nycinsiderguide.com/wp-content/uploads/2019/01/nyc-concerts-shows-may.jpg");
   align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  flex-wrap: wrap;
-
   justify-content: center;
 }
+.h2 {
+  background-color: white;
+}
+.nav {
+  background-color: white;
+}
+
+/* .app {
+  background: url("https://pyxis.nymag.com/v1/imgs/1a0/d70/15535af3e89c90d627f4c19af4f74f2064-best-concert-venue-music-hall-of-william.2x.rsocial.w600.jpg");
+} */

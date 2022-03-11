@@ -12,8 +12,9 @@ function App() {
       <h6>Welcome to Soundathon!</h6>
 
       {/* <Link to={"/map"}>Map</Link> */}
-      <Map />
+      {/* <Map /> */}
       <br />
+      <div className="app"></div>
     </div>
   );
 }
