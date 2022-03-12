@@ -3,30 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { useState, useEffect } from "react";
-import { eventsLocationsQueens } from "./EventsLocations";
+import { eventsLocationsManhattan } from "./EventsLocations";
 
-// const LeafIcon = L.Icon.extend({
-//   options: {
-//     iconSize: [38, 95],
-//     shadowSize: [50, 64],
-//     iconAnchor: [22, 94],
-//     shadowAnchor: [4, 62],
-//     popupAnchor: [-3, -76],
-//   },
-// });
-
-function Queens() {
-  // const map = useMap();
-  // const [latitude, setLatitude] = useState(0);
-  // const [longitude, setLongitude] = useState(0);
-  // useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition(({ coords }) => {
-  //     const { latitude, longitude } = coords;
-  //     setLatitude(latitude);
-  //     setLongitude(longitude);
-  //     map.setView([latitude, longitude], 13);
-  //   });
-  // }, [map]);
+function Manhattan() {
   const location = useGeoLocation();
 
   return (
@@ -36,7 +15,7 @@ function Queens() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {eventsLocationsQueens.map((event) => {
+        {eventsLocationsManhattan.map((event) => {
           return (
             <>
               <Marker position={[event.latitude, event.longitude]}>
@@ -61,4 +40,4 @@ function Queens() {
   );
 }
 
-export default Queens;
+export default Manhattan;

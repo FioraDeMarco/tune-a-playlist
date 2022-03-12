@@ -4,6 +4,11 @@ import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { useState, useEffect } from "react";
 import { eventsLocations } from "./EventsLocations";
+import { eventsLocationsTheBronx } from "./EventsLocations";
+import { eventsLocationsBrooklyn } from "./EventsLocations";
+import { eventsLocationsQueens } from "./EventsLocations";
+import { eventsLocationsManhattan } from "./EventsLocations";
+import { eventsLocationsStatenIsland } from "./EventsLocations";
 
 // const LeafIcon = L.Icon.extend({
 //   options: {
@@ -36,6 +41,8 @@ import { eventsLocations } from "./EventsLocations";
 //   },
 // ];
 
+// const location = useGeoLocation();
+
 function Map() {
   // const map = useMap();
   // const [latitude, setLatitude] = useState(0);
@@ -48,11 +55,17 @@ function Map() {
   //     map.setView([latitude, longitude], 13);
   //   });
   // }, [map]);
-  //const location = useGeoLocation();
+  const location = useGeoLocation();
+  //   const circle = L.circle([location], {
+  //     color: "red",
+  //     fillColor: "#f03",
+  //     fillOpacity: 0.5,
+  //     radius: 15,
+  //   }).addTo(map);
 
   return (
     <div className="App">
-      <MapContainer className="map" center={[40.7192, -73.9617]} zoom={13}>
+      <MapContainer className="map" center={[40.7192, -73.9617]} zoom={12}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -64,12 +77,85 @@ function Map() {
                 <Popup>
                   Soundathon Event
                   <br />
-                  {event.band} playing at {event.venue}
+                  {event.band} playing at {event.venue} at {event.time}!
+                  {event.link}
                 </Popup>
               </Marker>
             </>
           );
         })}
+        {eventsLocationsTheBronx.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude, event.time]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsBrooklyn.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsQueens.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsManhattan.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsStatenIsland.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {location.loaded && !location.error && (
+          <Marker
+            position={[location.coordinates.lat, location.coordinates.lng]}
+          >
+            <Popup>YOU ARE HERE</Popup>
+          </Marker>
+        )}
       </MapContainer>
     </div>
   );
@@ -121,13 +207,15 @@ function Map() {
 //     <Popup>YOU ARE HERE</Popup>
 //   </Marker>
 // )}
-// {/* <Marker position={[latitude, longitude]}>
-//   <Popup>Home</Popup>
-// </Marker> */}
+{
+  /* <Marker position={[latitude, longitude]}>
+  <Popup>Home</Popup>
+</Marker> 
 
 //       {/* <Marker position={[latitude, longitude]}>
 //         <Popup>Home</Popup>
-//       </Marker> */}
+//       </Marker> */
+}
 
 //     )};
 // }
