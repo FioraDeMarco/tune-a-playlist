@@ -49,6 +49,8 @@ function Queens() {
                   Soundathon Event
                   <br />
                   {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
                 </Popup>
               </Marker>
             </>

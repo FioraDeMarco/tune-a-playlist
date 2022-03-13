@@ -10,6 +10,7 @@ class AddEvent extends React.Component {
       venue: "",
       latitude: "",
       longitude: "",
+      time: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -58,6 +59,14 @@ class AddEvent extends React.Component {
           name="longitude"
           onChange={this.handleChange}
           value={this.state.longitude}
+        />
+        <br />
+        <br />
+        <input
+          placeholder="Enter Event Time"
+          name="time"
+          onChange={this.handleChange}
+          value={this.state.time}
         />
         <br />
         <br />
