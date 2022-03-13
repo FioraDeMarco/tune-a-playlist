@@ -18,18 +18,56 @@ body {
   padding-bottom: 50px;
   padding-left: 80px; */
   /* background: url("https://photos.app.goo.gl/NDMt9bp2Zhjdxnoj7"); */
-  height: 80vh;
+  height: 100vh;
   /* background: url("https://www.nycinsiderguide.com/wp-content/uploads/2019/01/nyc-concerts-shows-may.jpg"); */
-  background: url("https://secretnyc.co/wp-content/uploads/2021/07/37242912032_1cbf37f37b_k-1.jpg");
+  /* politician guy: */
+  /* background: url("https://secretnyc.co/wp-content/uploads/2021/07/37242912032_1cbf37f37b_k-1.jpg"); */
+  background: url("https://www.savingcountrymusic.com/wp-content/uploads/2017/05/concert-crowd.jpg");
+  /* background: url("https://media.istockphoto.com/photos/large-group-of-people-at-a-concert-party-picture-id1329410603?b=1&k=20&m=1329410603&s=170667a&w=0&h=Z0WeBwkcIZsGPqZgF8PiP2We2iwqKyjGg-9Jio2WPe8="); */
   /* background: url("https://i.pinimg.com/originals/8e/a2/48/8ea248c173996d46ebc5c91b86baee6d.jpg"); */
   /* align-items: center;
   justify-content: center; */
+  /* background-repeat: no-repeat; */
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#AlertDiv {
+  top: 198px;
+  left: 365px;
+  width: 62px;
+  height: 51px;
+  color: black;
+  position: absolute;
+  text-align: center;
+  background-color: white;
+}
+
+#AlertDiv h2 {
+  margin: auto;
+  line-height: 51px;
+  vertical-align: middle;
 }
 .h2 {
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
 .nav {
   background-color: white;
+}
+h5 {
+  display: flex;
+  justify-content: center;
+}
+h3 {
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  display: flex;
+  justify-content: center;
 }
 /* .links {
   justify-content: space-between;

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import L from "leaflet";
-// import {} from "mapbox-gl-leaflet";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { eventsLocations } from "./EventsLocations";
