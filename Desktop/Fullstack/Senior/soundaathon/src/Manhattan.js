@@ -1,5 +1,12 @@
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  CircleMarker,
+} from "react-leaflet";
 import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { useState, useEffect } from "react";
@@ -7,6 +14,11 @@ import { eventsLocationsManhattan } from "./EventsLocations";
 
 function Manhattan() {
   const location = useGeoLocation();
+  // function findNearbySound() {
+  //   const near = []
+  //   if({[event.latitude]})
+
+  // }
 
   return (
     <div className="App">
@@ -35,6 +47,15 @@ function Manhattan() {
             <Popup>YOU ARE HERE</Popup>
           </Marker>
         )}
+        {/* <CircleMarker
+          center={[location.coordinates.lat, location.coordinates.lng]}
+          // color={location.blue()}
+          radius={location.computeMarkerSize(1)}
+        >
+          <Popup>
+            <span>Radius is for: {location} </span>
+          </Popup>
+        </CircleMarker> */}
       </MapContainer>
     </div>
   );

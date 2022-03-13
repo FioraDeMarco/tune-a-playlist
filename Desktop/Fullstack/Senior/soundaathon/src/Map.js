@@ -1,5 +1,15 @@
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  Circle,
+  CircleMarker,
+  FeatureGroup,
+  LayerGroup,
+} from "react-leaflet";
 import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { useState, useEffect } from "react";
@@ -10,39 +20,8 @@ import { eventsLocationsQueens } from "./EventsLocations";
 import { eventsLocationsManhattan } from "./EventsLocations";
 import { eventsLocationsStatenIsland } from "./EventsLocations";
 
-// const LeafIcon = L.Icon.extend({
-//   options: {
-//     iconSize: [38, 95],
-//     shadowSize: [50, 64],
-//     iconAnchor: [22, 94],
-//     shadowAnchor: [4, 62],
-//     popupAnchor: [-3, -76],
-//   },
-// });
-
-// const eventsLocations = [
-//   {
-//     band: "Grey Day",
-//     venue: "Cutting-Room",
-//     latitude: 40.74292,
-//     longitude: -73.99052,
-//   },
-//   {
-//     band: "Artic Donkeys",
-//     venue: "Rockwood Music Hall",
-//     latitude: 40.72234,
-//     longitude: -73.98856,
-//   },
-//   {
-//     band: "Peppers",
-//     venue: "Music Hall of Williamsburg",
-//     latitude: 40.7192,
-//     longitude: -73.9617,
-//   },
-// ];
-
 // const location = useGeoLocation();
-
+//locationadd event listener set zoom set bounds
 function Map() {
   // const map = useMap();
   // const [latitude, setLatitude] = useState(0);
@@ -56,13 +35,12 @@ function Map() {
   //   });
   // }, [map]);
   const location = useGeoLocation();
-  //   const circle = L.circle([location], {
-  //     color: "red",
-  //     fillColor: "#f03",
-  //     fillOpacity: 0.5,
-  //     radius: 15,
-  //   }).addTo(map);
-
+  const center = [location.coordinates.lat, location.coordinates.lng];
+  const fillBlueOptions = { fillColor: "blue" };
+  const fillRedOptions = { fillColor: "red" };
+  //location.setView
+  const zoomButton = document.querySelector(".zoom");
+  console.log("zoom to data", zoomButton);
   return (
     <div className="App">
       <MapContainer className="map" center={[40.7192, -73.9617]} zoom={12}>
@@ -156,6 +134,15 @@ function Map() {
             <Popup>YOU ARE HERE</Popup>
           </Marker>
         )}
+        <LayerGroup>
+          <Circle center={center} pathOptions={fillBlueOptions} radius={4000} />
+          <Circle
+            center={center}
+            pathOptions={fillRedOptions}
+            radius={8000}
+            stroke={false}
+          />
+        </LayerGroup>
       </MapContainer>
     </div>
   );

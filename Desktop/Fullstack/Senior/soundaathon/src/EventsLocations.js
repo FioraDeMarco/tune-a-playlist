@@ -9,8 +9,6 @@ export const eventsLocations = [
     venue: "Cutting-Room",
     latitude: 40.74292,
     longitude: -73.99052,
-    // url: "http://thecuttingroomnyc.com/",
-    // url: <Link to={"http://thecuttingroomnyc.com/"} />,
     link: "http://thecuttingroomnyc.com/",
     time: "10pm",
   },
@@ -293,3 +291,6 @@ export const eventsLocationsStatenIsland = [
     time: "10pm",
   },
 ];
+
+// url: "http://thecuttingroomnyc.com/",
+// url: <Link to={"http://thecuttingroomnyc.com/"} />,

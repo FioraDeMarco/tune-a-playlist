@@ -1,43 +1,119 @@
-// import React, { useEffect } from "react";
-// import "./App.css";
-// import L from "leaflet";
+import React, { useEffect } from "react";
+import "./App.css";
+import L from "leaflet";
 // import {} from "mapbox-gl-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import useGeoLocation from "./useGeoLocation";
+import { eventsLocations } from "./EventsLocations";
 
-// function MyMap() {
-//   let mapContainer;
+function MyMap() {
+  const location = useGeoLocation();
+  let range = [];
+  // function withinRange() {
+  //   for (let i = 0; i < eventsLocations.length; i++) {
+  //     // let eventLatitude = eventsLocations.latitude[i];
+  //     console.log("i", i);
+  //     if (
+  //       eventsLocations.latitude < location.coordinates.lat + 2 &&
+  //       eventsLocations.longitude < location.coordinates.lng + 2
+  //     ) {
+  //       //range.push(eventsLocations.latitude, eventsLocations.longitude);
+  //       range.push(eventsLocations.latitude);
+  //       range.push(eventsLocations.longitude);
+  //     }
+  //   }
+  //   return range;
+  // }
+  function withinRange() {
+    if (
+      eventsLocations.latitude < location.coordinates.lat &&
+      eventsLocations.longitude < location.coordinates.lng
+    ) {
+      range.push(eventsLocations.latitude, eventsLocations.longitude);
+    }
+    return range;
+  }
+  let ranges = eventsLocations.filter((event) => {
+    return withinRange(event);
+  });
+  // withinRange(eventsLocations);
+  // withinRange();
+  console.log("ranges", ranges);
+  //console.log("range", withinRange(eventsLocations));
+  //console.log("range", eventsLocations);
+  console.log("my lat", location.coordinates.lat);
+  console.log("my lng", location.coordinates.lng);
+  console.log("eventslocations", eventsLocations);
 
-//   useEffect(() => {
-//     const initialState = {
-//       lng: 11,
-//       lat: 49,
-//       zoom: 4,
-//     };
+  return (
+    <div className="MyMap">
+      <MapContainer
+        className="mymapcontainer"
+        center={[40.7192, -73.9617]}
+        zoom={13}
+      >
+        {location.loaded && !location.error && (
+          <Marker
+            position={[location.coordinates.lat, location.coordinates.lng]}
+          >
+            <Popup>YOU ARE HERE</Popup>
+          </Marker>
+        )}
+        {withinRange(eventsLocations).map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {/* <Marker position={withinRange(eventsLocations)}>
+          <Popup>Local</Popup>
+        </Marker> */}
+      </MapContainer>
+    </div>
+  );
+}
 
-//     const map = L.map(mapContainer).setView(
-//       [initialState.lat, initialState.lng],
-//       initialState.zoom
+export default MyMap;
+
+// let mapContainer;
+
+// useEffect(() => {
+//   const initialState = {
+//     lng: 11,
+//     lat: 49,
+//     zoom: 4,
+//   };
+
+//   const map = L.map(mapContainer).setView(
+//     [initialState.lat, initialState.lng],
+//     initialState.zoom
+//   );
+
+//   // the attribution is required for the Geoapify Free tariff plan
+//   map.attributionControl
+//     .setPrefix("")
+//     .addAttribution(
+//       'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | © OpenStreetMap <a href="https://www.openstreetmap.org/copyright" target="_blank">contributors</a>'
 //     );
 
-//     // the attribution is required for the Geoapify Free tariff plan
-//     map.attributionControl
-//       .setPrefix("")
-//       .addAttribution(
-//         'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | © OpenStreetMap <a href="https://www.openstreetmap.org/copyright" target="_blank">contributors</a>'
-//       );
+//   var myAPIKey =
+//     "5cd134075d56422182711d85ea86f19e44bee9bb397551ce87be12ac43edeaaf";
+//   const mapStyle = "https://maps.geoapify.com/v1/styles/osm-carto/style.json";
 
-//     var myAPIKey =
-//       "5cd134075d56422182711d85ea86f19e44bee9bb397551ce87be12ac43edeaaf";
-//     const mapStyle = "https://maps.geoapify.com/v1/styles/osm-carto/style.json";
+//   const gl = L.mapboxGL({
+//     style: `${mapStyle}?apiKey=${myAPIKey}`,
+//     accessToken: "no-token",
+//   }).addTo(map);
+// }, [mapContainer]);
 
-//     const gl = L.mapboxGL({
-//       style: `${mapStyle}?apiKey=${myAPIKey}`,
-//       accessToken: "no-token",
-//     }).addTo(map);
-//   }, [mapContainer]);
-
-//   return (
-//     <div className="map-container" ref={(el) => (mapContainer = el)}></div>
-//   );
-// }
-
-// export default MyMap;
+// return (
+//   // <div className="map-container" ref={(el) => (mapContainer = el)}></div>
+//   <div>Lameeee</div>
+// );

@@ -1,5 +1,15 @@
 import "./App.css";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  Circle,
+  CircleMarker,
+  FeatureGroup,
+  LayerGroup,
+} from "react-leaflet";
 import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
 import { useState, useEffect } from "react";
@@ -16,18 +26,13 @@ import { eventsLocationsQueens } from "./EventsLocations";
 // });
 
 function Queens() {
-  // const map = useMap();
-  // const [latitude, setLatitude] = useState(0);
-  // const [longitude, setLongitude] = useState(0);
-  // useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition(({ coords }) => {
-  //     const { latitude, longitude } = coords;
-  //     setLatitude(latitude);
-  //     setLongitude(longitude);
-  //     map.setView([latitude, longitude], 13);
-  //   });
-  // }, [map]);
   const location = useGeoLocation();
+  const center = [location.coordinates.lat, location.coordinates.lng];
+  //L.circle([location.coordinates.lat, location.coordinates.lng]);
+  const fillBlueOptions = { fillColor: "blue" };
+  const fillRedOptions = { fillColor: "red" };
+  const greenOptions = { color: "green", fillColor: "green" };
+  const purpleOptions = { color: "purple" };
 
   return (
     <div className="App">
@@ -56,6 +61,22 @@ function Queens() {
             <Popup>YOU ARE HERE</Popup>
           </Marker>
         )}
+        {/* <LayerGroup>
+          <Circle center={center} pathOptions={fillBlueOptions} radius={4000} />
+          <Circle
+            center={center}
+            pathOptions={fillRedOptions}
+            radius={8000}
+            stroke={false}
+          />
+          <LayerGroup>
+            <Circle
+              center={[51.51, -0.08]}
+              pathOptions={greenOptions}
+              radius={100}
+            />
+          </LayerGroup>
+        </LayerGroup> */}
       </MapContainer>
     </div>
   );
