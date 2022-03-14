@@ -12,7 +12,12 @@ export const eventsLocations = [
     link: (
       <a href="http://thecuttingroomnyc.com/">Visit this venue's website</a>
     ),
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
+
     time: "10pm",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
@@ -24,6 +29,10 @@ export const eventsLocations = [
       <a href="http://thecuttingroomnyc.com/">Visit this venue's website</a>
     ),
     time: "7pm",
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
@@ -31,12 +40,16 @@ export const eventsLocations = [
     venue: "Music Hall of Williamsburg",
     latitude: 40.7192,
     longitude: -73.9617,
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
     link: (
       <a href="https://www.musichallofwilliamsburg.com/">
         Visit this venue's website
       </a>
     ),
     time: "9pm",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 4,
@@ -45,7 +58,11 @@ export const eventsLocations = [
     latitude: 40.7253224,
     longitude: -73.9842582,
     link: <a href="https://dromnyc.com/">Visit this venue's website</a>,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     time: "8pm",
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
   },
   {
     id: 5,
@@ -57,6 +74,10 @@ export const eventsLocations = [
       <a href="https://rockwoodmusichall.com/">Visit this venue's website</a>
     ),
     time: "10pm",
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 6,
@@ -64,10 +85,14 @@ export const eventsLocations = [
     venue: "Peco's Wyckoff Avenue",
     latitude: 40.6972,
     longitude: -73.906,
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
     link: (
       <a href="https://www.thetranspecos.com/">Visit this venue's website</a>
     ),
     time: "7pm",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
@@ -79,15 +104,21 @@ export const eventsLocationsQueens = [
     longitude: -73.881793383051,
     link: <a href="https://terraza7.com/">Visit this venue's website</a>,
     time: "9pm",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     band: "Mikel",
     venue: "The Shillelagh Tavern",
     latitude: 40.7612303,
     longitude: 73.9088668,
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     link: (
       <a href="https://www.shillelaghtavern.com/">Visit this venue's website</a>
     ),
+    imageUrl:
+      "https://pyxis.nymag.com/v1/imgs/20b/c5b/fb27425c5dede0f79a3fd6271b97ba7e42-31-pink-floyd-feature.2x.rsocial.w600.jpg",
     time: "8pm",
   },
 
@@ -100,12 +131,16 @@ export const eventsLocationsQueens = [
       <a href="https://www.queensbrewery.com/">Visit this venue's website</a>
     ),
     time: "10pm",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     band: "Roosevelt",
     venue: "Dylans Forrest Hills",
     latitude: 40.7104,
     longitude: -73.8491,
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     link: (
       <a href="http://dylansforesthills.com/">Visit this venue's website</a>
     ),
@@ -119,6 +154,8 @@ export const eventsLocationsQueens = [
     longitude: -73.8444,
     link: <a href="https://queenstheatre.org/">Visit this venue's website</a>,
     time: "9pm",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 
   {
@@ -128,6 +165,8 @@ export const eventsLocationsQueens = [
     longitude: -73.9236,
     link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
     time: "8pm",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     band: "Ladybugs",
@@ -140,6 +179,8 @@ export const eventsLocationsQueens = [
       </a>
     ),
     time: "10pm",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
 
@@ -151,6 +192,8 @@ export const eventsLocationsBrooklyn = [
     longitude: -73.9295,
     link: <a href="https://www.goldsounds.bar/">Visit this venue's website</a>,
     time: "7pm",
+    description:
+      "Descritpin: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     band: "Kyga",

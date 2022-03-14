@@ -36,7 +36,7 @@ function Queens() {
 
   return (
     <div className="App">
-      <MapContainer className="map" center={[40.7094, -73.9232]} zoom={13}>
+      <MapContainer className="map" center={[40.7104, -73.8491]} zoom={12}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

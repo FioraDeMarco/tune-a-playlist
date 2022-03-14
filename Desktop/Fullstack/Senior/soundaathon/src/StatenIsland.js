@@ -10,7 +10,7 @@ function StatenIsland() {
 
   return (
     <div className="App">
-      <MapContainer className="map" center={[40.6125, -74.0651]} zoom={13}>
+      <MapContainer className="map" center={[40.6125, -74.0651]} zoom={12}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

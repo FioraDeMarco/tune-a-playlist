@@ -7,6 +7,7 @@ import Manhattan from "./Manhattan";
 import StatenIsland from "./StatenIsland";
 import Bx from "./Bx";
 import AddEvent from "./AddEvent";
+import BandInfo from "./BandInfo";
 import MyMap from "./MyMap";
 import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 
@@ -26,6 +27,7 @@ class Routes extends Component {
             <Link to="/bx">The Bronx</Link>
             <Link to="/AddEvent">Add Event</Link>
             <Link to="/MyMap">MyMap</Link>
+            <Link to="/BandInfo">Band Info</Link>
           </nav>
           <Switch>
             <Route exact path="/app" component={App} />
@@ -37,6 +39,7 @@ class Routes extends Component {
             <Route exact path="/bx" component={Bx} />
             <Route exact path="/AddEvent" component={AddEvent} />
             <Route exact path="/MyMap" component={MyMap} />
+            <Route exact path="/BandInfo" component={BandInfo} />
           </Switch>
         </div>
       </Router>
