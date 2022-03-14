@@ -306,6 +306,30 @@ export const eventsLocationsManhattan = [
     ),
     time: "10pm",
   },
+  {
+    band: "Lotus",
+    venue: "Midtown Live",
+    latitude: 40.7495,
+    longitude: -73.9942,
+    link: (
+      <a href="https://afternic.com/forsale/midtownlive.com?utm_source=TDFS&utm_medium=sn_affiliate_click&utm_campaign=TDFS_GoDaddy_DLS&traffic_type=TDFS&traffic_id=GoDaddy_DLS">
+        Visit this venue's website
+      </a>
+    ),
+    time: "8pm",
+  },
+  {
+    band: "Tov Lo",
+    venue: "Village Underground",
+    latitude: 40.7307,
+    longitude: -74.0009,
+    link: (
+      <a href="https://thevillageunderground.com/">
+        Visit this venue's website
+      </a>
+    ),
+    time: "10pm",
+  },
 ];
 
 export const eventsLocationsTheBronx = [
@@ -364,6 +388,30 @@ export const eventsLocationsTheBronx = [
     ),
     time: "7pm",
   },
+  {
+    band: "Body Face",
+    venue: "Elite Bookings",
+    latitude: 40.8488,
+    longitude: 73.912,
+    link: (
+      <a href="https://www.facebook.com/elitebookingsny">
+        Visit this venue's website
+      </a>
+    ),
+    time: "10pm",
+  },
+  {
+    band: "Jeffererson Aircraft",
+    venue: "Keane's Bar and Restaurant",
+    latitude: 40.9001,
+    longitude: -73.8674,
+    link: (
+      <a href="https://keanes-bar-and-restaurant.business.site/?utm_source=gmb&utm_medium=referral">
+        Visit this venue's website
+      </a>
+    ),
+    time: "7pm",
+  },
 ];
 
 export const eventsLocationsStatenIsland = [
@@ -399,6 +447,28 @@ export const eventsLocationsStatenIsland = [
     longitude: -74.0970553,
     link: (
       <a href="https://forgotten-ny.com/2012/05/liedys-shore-inn/">
+        Visit this venue's website
+      </a>
+    ),
+    time: "10pm",
+  },
+  {
+    band: "Avenged Tenfold",
+    venue: "Serena's Catering",
+    latitude: 40.56134,
+    longitude: -74.10457,
+    link: (
+      <a href="https://serenascateringhall.com/">Visit this venue's website</a>
+    ),
+    time: "8pm",
+  },
+  {
+    band: "System of an up",
+    venue: "Joyce's Tavern",
+    latitude: 40.6445602,
+    longitude: -74.0970553,
+    link: (
+      <a href="http://www.joycestavern.com/musicnights/">
         Visit this venue's website
       </a>
     ),
