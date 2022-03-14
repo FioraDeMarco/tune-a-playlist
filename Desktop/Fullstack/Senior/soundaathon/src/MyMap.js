@@ -1,64 +1,43 @@
-import React, { useEffect } from "react";
 import "./App.css";
-import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  Circle,
+  CircleMarker,
+  FeatureGroup,
+  LayerGroup,
+} from "react-leaflet";
+import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
+import { useState, useEffect } from "react";
 import { eventsLocations } from "./EventsLocations";
+import { eventsLocationsTheBronx } from "./EventsLocations";
+import { eventsLocationsBrooklyn } from "./EventsLocations";
+import { eventsLocationsQueens } from "./EventsLocations";
+import { eventsLocationsManhattan } from "./EventsLocations";
+import { eventsLocationsStatenIsland } from "./EventsLocations";
 
+// const location = useGeoLocation();
+//locationadd event listener set zoom set bounds
 function MyMap() {
   const location = useGeoLocation();
-  let range = [];
-  // function withinRange() {
-  //   for (let i = 0; i < eventsLocations.length; i++) {
-  //     // let eventLatitude = eventsLocations.latitude[i];
-  //     console.log("i", i);
-  //     if (
-  //       eventsLocations.latitude < location.coordinates.lat + 2 &&
-  //       eventsLocations.longitude < location.coordinates.lng + 2
-  //     ) {
-  //       //range.push(eventsLocations.latitude, eventsLocations.longitude);
-  //       range.push(eventsLocations.latitude);
-  //       range.push(eventsLocations.longitude);
-  //     }
-  //   }
-  //   return range;
-  // }
-  function withinRange() {
-    if (
-      eventsLocations.latitude < location.coordinates.lat &&
-      eventsLocations.longitude < location.coordinates.lng
-    ) {
-      range.push(eventsLocations.latitude, eventsLocations.longitude);
-    }
-    return range;
-  }
-  let ranges = eventsLocations.filter((event) => {
-    return withinRange(event);
-  });
-  // withinRange(eventsLocations);
-  // withinRange();
-  console.log("ranges", ranges);
-  //console.log("range", withinRange(eventsLocations));
-  //console.log("range", eventsLocations);
-  console.log("my lat", location.coordinates.lat);
-  console.log("my lng", location.coordinates.lng);
-  console.log("eventslocations", eventsLocations);
-
+  const center = [location.coordinates.lat, location.coordinates.lng];
+  const fillBlueOptions = { fillColor: "blue" };
+  const fillRedOptions = { fillColor: "red" };
+  //location.setView
+  const zoomButton = document.querySelector(".zoom");
+  console.log("zoom to data", zoomButton);
   return (
-    <div className="MyMap">
-      <MapContainer
-        className="mymapcontainer"
-        center={[40.7192, -73.9617]}
-        zoom={13}
-      >
-        {location.loaded && !location.error && (
-          <Marker
-            position={[location.coordinates.lat, location.coordinates.lng]}
-          >
-            <Popup>YOU ARE HERE</Popup>
-          </Marker>
-        )}
-        {withinRange(eventsLocations).map((event) => {
+    <div className="App">
+      <MapContainer className="map" center={[40.7192, -73.9617]} zoom={12}>
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {eventsLocations.map((event) => {
           return (
             <>
               <Marker position={[event.latitude, event.longitude]}>
@@ -66,20 +45,202 @@ function MyMap() {
                   Soundathon Event
                   <br />
                   {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
                 </Popup>
               </Marker>
             </>
           );
         })}
-        {/* <Marker position={withinRange(eventsLocations)}>
-          <Popup>Local</Popup>
-        </Marker> */}
+        {eventsLocationsTheBronx.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude, event.time]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsBrooklyn.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsQueens.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsManhattan.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {eventsLocationsStatenIsland.map((event) => {
+          return (
+            <>
+              <Marker position={[event.latitude, event.longitude]}>
+                <Popup>
+                  Soundathon Event
+                  <br />
+                  {event.band} playing at {event.venue} at {event.time}!
+                  <br />
+                  {event.link}
+                </Popup>
+              </Marker>
+            </>
+          );
+        })}
+        {location.loaded && !location.error && (
+          <Marker
+            position={[location.coordinates.lat, location.coordinates.lng]}
+          >
+            <Popup>YOU ARE HERE</Popup>
+          </Marker>
+        )}
+        {/* <LayerGroup>
+          <Circle center={center} pathOptions={fillBlueOptions} radius={4000} />
+          <Circle
+            center={center}
+            pathOptions={fillRedOptions}
+            radius={8000}
+            stroke={false}
+          />
+        </LayerGroup> */}
       </MapContainer>
     </div>
   );
 }
 
 export default MyMap;
+
+//-------------------TRYING FOR LOCATION
+//-------------------TRYING FOR LOCATION
+//-------------------TRYING FOR LOCATION
+//-------------------TRYING FOR LOCATION
+//-------------------TRYING FOR LOCATION
+//-------------------TRYING FOR LOCATION
+
+// import React, { useEffect } from "react";
+// import "./App.css";
+// import L from "leaflet";
+// import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+// import useGeoLocation from "./useGeoLocation";
+// import { eventsLocations } from "./EventsLocations";
+
+// function MyMap() {
+//   const location = useGeoLocation();
+//   let range = [];
+//   // function withinRange() {
+//   //   for (let i = 0; i < eventsLocations.length; i++) {
+//   //     // let eventLatitude = eventsLocations.latitude[i];
+//   //     console.log("i", i);
+//   //     if (
+//   //       eventsLocations.latitude < location.coordinates.lat + 2 &&
+//   //       eventsLocations.longitude < location.coordinates.lng + 2
+//   //     ) {
+//   //       //range.push(eventsLocations.latitude, eventsLocations.longitude);
+//   //       range.push(eventsLocations.latitude);
+//   //       range.push(eventsLocations.longitude);
+//   //     }
+//   //   }
+//   //   return range;
+//   // }
+//   function withinRange() {
+//     if (
+//       eventsLocations.latitude < location.coordinates.lat &&
+//       eventsLocations.longitude < location.coordinates.lng
+//     ) {
+//       range.push(eventsLocations.latitude, eventsLocations.longitude);
+//     }
+//     return range;
+//   }
+//   let ranges = eventsLocations.filter((event) => {
+//     return withinRange(event);
+//   });
+//   // withinRange(eventsLocations);
+//   // withinRange();
+//   console.log("ranges", ranges);
+//   //console.log("range", withinRange(eventsLocations));
+//   //console.log("range", eventsLocations);
+//   console.log("my lat", location.coordinates.lat);
+//   console.log("my lng", location.coordinates.lng);
+//   console.log("eventslocations", eventsLocations);
+
+//   return (
+//     <div className="MyMap">
+//       <MapContainer
+//         className="mymapcontainer"
+//         center={[40.7192, -73.9617]}
+//         zoom={13}
+//       >
+//         {location.loaded && !location.error && (
+//           <Marker
+//             position={[location.coordinates.lat, location.coordinates.lng]}
+//           >
+//             <Popup>YOU ARE HERE</Popup>
+//           </Marker>
+//         )}
+//         {withinRange(eventsLocations).map((event) => {
+//           return (
+//             <>
+//               <Marker position={[event.latitude, event.longitude]}>
+//                 <Popup>
+//                   Soundathon Event
+//                   <br />
+//                   {event.band} playing at {event.venue} at {event.time}!
+//                 </Popup>
+//               </Marker>
+//             </>
+//           );
+//         })}
+//         {/* <Marker position={withinRange(eventsLocations)}>
+//           <Popup>Local</Popup>
+//         </Marker> */}
+//       </MapContainer>
+//     </div>
+//   );
+// }
+
+// export default MyMap;
+
+//-------------------TRYING FOR LOCATION
 
 // let mapContainer;
 

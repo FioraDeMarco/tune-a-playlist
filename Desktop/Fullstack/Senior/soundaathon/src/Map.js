@@ -158,7 +158,7 @@ function Map() {
     </div>
   );
 }
-
+export default Map;
 // <Marker position={[40.72234, -73.98856]}>
 //   <Popup>
 //     Soundathon Event
@@ -217,5 +217,3 @@ function Map() {
 
 //     )};
 // }
-
-export default Map;

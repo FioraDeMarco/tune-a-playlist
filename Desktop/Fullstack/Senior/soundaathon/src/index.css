@@ -56,6 +56,10 @@ body {
 }
 .nav {
   background-color: white;
+  text-align: center;
+}
+.links {
+  text-align: center;
 }
 h5 {
   display: flex;
@@ -69,9 +73,10 @@ h2 {
   display: flex;
   justify-content: center;
 }
-/* .links {
+.links {
   justify-content: space-between;
-} */
+  horizontal-align: middle;
+}
 
 /* .app {
   background: url("https://pyxis.nymag.com/v1/imgs/1a0/d70/15535af3e89c90d627f4c19af4f74f2064-best-concert-venue-music-hall-of-william.2x.rsocial.w600.jpg");
