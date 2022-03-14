@@ -320,11 +320,11 @@ export const eventsLocationsManhattan = [
   },
   {
     band: "Tov Lo",
-    venue: "Village Underground",
-    latitude: 40.7307,
-    longitude: -74.0009,
+    venue: "Irving Plaza",
+    latitude: 40.7349,
+    longitude: -73.9884,
     link: (
-      <a href="https://thevillageunderground.com/">
+      <a href="https://www.livenation.com/venue/KovZpaFPje/irving-plaza-events">
         Visit this venue's website
       </a>
     ),

@@ -145,7 +145,7 @@ function Map() {
             <Popup>YOU ARE HERE</Popup>
           </Marker>
         )}
-        <LayerGroup>
+        {/* <LayerGroup>
           <Circle center={center} pathOptions={fillBlueOptions} radius={4000} />
           <Circle
             center={center}
@@ -153,7 +153,7 @@ function Map() {
             radius={8000}
             stroke={false}
           />
-        </LayerGroup>
+        </LayerGroup> */}
       </MapContainer>
     </div>
   );
