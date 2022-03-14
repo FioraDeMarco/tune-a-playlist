@@ -176,7 +176,11 @@ export const eventsLocationsBrooklyn = [
     venue: "Elsewhere",
     latitude: 40.7094,
     longitude: -73.9232,
-    link: <a href="https://union-pool.com/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.elsewherebrooklyn.com/">
+        Visit this venue's website
+      </a>
+    ),
     time: "7pm",
   },
   {
@@ -184,7 +188,9 @@ export const eventsLocationsBrooklyn = [
     venue: "Bossa Nova Civic Club",
     latitude: 40.7005456,
     longitude: -73.9257976,
-    link: <a href="https://union-pool.com/">Visit this venue's website</a>,
+    link: (
+      <a href="http://bossanovacivicclub.com/">Visit this venue's website</a>
+    ),
     time: "9pm",
   },
   {
@@ -192,7 +198,11 @@ export const eventsLocationsBrooklyn = [
     venue: "Brooklyn Steel",
     latitude: 40.7194,
     longitude: -73.9388,
-    link: <a href="https://union-pool.com/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.bowerypresents.com/venues/brooklyn-steel">
+        Visit this venue's website
+      </a>
+    ),
     time: "8pm",
   },
   {
@@ -200,7 +210,9 @@ export const eventsLocationsBrooklyn = [
     venue: "Knitting Factory",
     latitude: 40.7142,
     longitude: -73.9558,
-    link: <a href="https://union-pool.com/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.knittingfactory.com/">Visit this venue's website</a>
+    ),
     time: "10pm",
   },
 ];
@@ -211,7 +223,7 @@ export const eventsLocationsManhattan = [
     venue: "Smalls",
     latitude: 40.7344,
     longitude: -74.0028,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: <a href="https://www.smallslive.com/">Visit this venue's website</a>,
     time: "7pm",
   },
   {
@@ -219,7 +231,11 @@ export const eventsLocationsManhattan = [
     venue: "Spyscape",
     latitude: 40.7653,
     longitude: -73.9837,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://spyscape.com/nyc/visit?utm_term=spyscape&utm_campaign=ST+%7C+Spyscape+%7C+US+%7C+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=7500607600&hsa_cam=10963781002&hsa_grp=113262703328&hsa_ad=459839837433&hsa_src=g&hsa_tgt=kwd-418636489883&hsa_kw=spyscape&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAybaRBhDtARIsAIEG3kmyb8KVgl8PkwOkrFDZpz-VKpzR8cq1M7OJTtz5ScdZNg4sqh2YdZMaAhfEEALw_wcB">
+        Visit this venue's website
+      </a>
+    ),
     time: "9pm",
   },
   {
@@ -227,7 +243,11 @@ export const eventsLocationsManhattan = [
     venue: "Mezzrow",
     latitude: 40.7346,
     longitude: -74.0019,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.smallslive.com/mezzrow/">
+        Visit this venue's website
+      </a>
+    ),
     time: "8pm",
   },
   {
@@ -235,7 +255,9 @@ export const eventsLocationsManhattan = [
     venue: "The Bitter End",
     latitude: 40.7284,
     longitude: -73.9992,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://bitterend.com/#/events">Visit this venue's website</a>
+    ),
     time: "10pm",
   },
 
@@ -244,7 +266,9 @@ export const eventsLocationsManhattan = [
     venue: "Terminal 5",
     latitude: 40.7697,
     longitude: -73.9927,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.terminal5nyc.com/">Visit this venue's website</a>
+    ),
     time: "9pm",
   },
   {
@@ -252,7 +276,11 @@ export const eventsLocationsManhattan = [
     venue: "Bowery Electric",
     latitude: 40.7257,
     longitude: -73.9918,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.theboweryelectric.com/electric-feel-dance-party?gclid=Cj0KCQiAybaRBhDtARIsAIEG3kl4XjHfZdEWXTFOQ2bNtGauavnIdkjv-lSuOtDakp3DBqdaSIyG0tsaAmcrEALw_wcB">
+        Visit this venue's website
+      </a>
+    ),
     time: "9pm",
   },
 
@@ -261,7 +289,9 @@ export const eventsLocationsManhattan = [
     venue: "Chelsae Music Hall",
     latitude: 40.742352,
     longitude: -74.00621,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.chelseamusichall.com/">Visit this venue's website</a>
+    ),
     time: "8pm",
   },
   {
@@ -269,7 +299,11 @@ export const eventsLocationsManhattan = [
     venue: "Village Underground",
     latitude: 40.7307,
     longitude: -74.0009,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://thevillageunderground.com/">
+        Visit this venue's website
+      </a>
+    ),
     time: "10pm",
   },
 ];
@@ -280,7 +314,11 @@ export const eventsLocationsTheBronx = [
     venue: "An Beal Bocht Cafe",
     latitude: 40.887375,
     longitude: -73.904953,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="http://www.anbealbochtcafe.com/music-events">
+        Visit this venue's website
+      </a>
+    ),
     time: "7pm",
   },
   {
@@ -288,7 +326,11 @@ export const eventsLocationsTheBronx = [
     venue: "Allertone Showcase",
     latitude: 40.8655,
     longitude: -73.8494,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.eventective.com/bronx-ny/allertone-showcase-574721.html">
+        Visit this venue's website
+      </a>
+    ),
     time: "9pm",
   },
 
@@ -297,7 +339,7 @@ export const eventsLocationsTheBronx = [
     venue: "Shrine",
     latitude: 40.85028,
     longitude: -73.90611,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: <a href="https://www.shrinenyc.com/">Visit this venue's website</a>,
     time: "8pm",
   },
   {
@@ -305,7 +347,11 @@ export const eventsLocationsTheBronx = [
     venue: "Marina Del Rey",
     latitude: 40.8141,
     longitude: -73.8149,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.visitmarinadelrey.com/nightlife/music-and-dancing">
+        Visit this venue's website
+      </a>
+    ),
     time: "10pm",
   },
   {
@@ -313,7 +359,9 @@ export const eventsLocationsTheBronx = [
     venue: "Morris Park Inn",
     latitude: 40.8483,
     longitude: -73.8552,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.morrisparkinn.com/">Visit this venue's website</a>
+    ),
     time: "7pm",
   },
 ];
@@ -324,7 +372,11 @@ export const eventsLocationsStatenIsland = [
     venue: "Rosebank Tavern",
     latitude: 40.6125,
     longitude: -74.0651,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.silive.com/entertainment/2020/02/rosebank-tavern-to-temporarily-shut-for-renovations.html">
+        Visit this venue's website
+      </a>
+    ),
     time: "9pm",
   },
 
@@ -333,7 +385,11 @@ export const eventsLocationsStatenIsland = [
     venue: "Mother Pugs Saloon",
     latitude: 40.6256315,
     longitude: -74.1352689,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://www.restaurantji.com/ny/staten-island/mother-pugs-saloon-/">
+        Visit this venue's website
+      </a>
+    ),
     time: "8pm",
   },
   {
@@ -341,7 +397,11 @@ export const eventsLocationsStatenIsland = [
     venue: "Liedys Shore Inn",
     latitude: 40.6445602,
     longitude: -74.0970553,
-    link: <a href="https://houseofyes.org/">Visit this venue's website</a>,
+    link: (
+      <a href="https://forgotten-ny.com/2012/05/liedys-shore-inn/">
+        Visit this venue's website
+      </a>
+    ),
     time: "10pm",
   },
 ];
