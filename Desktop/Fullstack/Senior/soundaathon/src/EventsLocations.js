@@ -518,6 +518,3 @@ export const eventsLocationsStatenIsland = [
     time: "10pm",
   },
 ];
-
-// url: "http://thecuttingroomnyc.com/",
-// url: <Link to={"http://thecuttingroomnyc.com/"} />,
