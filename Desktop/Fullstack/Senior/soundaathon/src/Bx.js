@@ -1,19 +1,17 @@
 import "./App.css";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import { L } from "leaflet";
 import useGeoLocation from "./useGeoLocation";
-import { useState, useEffect } from "react";
 import { eventsLocationsTheBronx } from "./EventsLocations";
 
 function Bx() {
   const location = useGeoLocation();
 
   return (
-    <div className="App">
-      <MapContainer className="map" center={[40.8483, -73.8552]} zoom={12}>
+    <div className='App'>
+      <MapContainer className='map' center={[40.8483, -73.8552]} zoom={12}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
         {eventsLocationsTheBronx.map((event) => {
           return (

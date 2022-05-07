@@ -29,49 +29,49 @@ class AddEvent extends React.Component {
 
   render() {
     return (
-      <form id="new-event-form" onSubmit={this.handleSubmit}>
+      <form id='new-event-form' onSubmit={this.handleSubmit}>
         <input
-          placeholder="Enter Band name"
-          name="band"
+          placeholder='Enter Band name'
+          name='band'
           onChange={this.handleChange}
           value={this.state.band}
         />
         <br />
         <br />
         <input
-          placeholder="Enter Venue name"
-          name="venue"
+          placeholder='Enter Venue name'
+          name='venue'
           onChange={this.handleChange}
           value={this.state.venue}
         />
         <br />
         <br />
         <input
-          placeholder="Enter latitude"
-          name="latitude"
+          placeholder='Enter latitude'
+          name='latitude'
           onChange={this.handleChange}
           value={this.state.latitude}
         />
         <br />
         <br />
         <input
-          placeholder="Enter longitude"
-          name="longitude"
+          placeholder='Enter longitude'
+          name='longitude'
           onChange={this.handleChange}
           value={this.state.longitude}
         />
         <br />
         <br />
         <input
-          placeholder="Enter Event Time"
-          name="time"
+          placeholder='Enter Event Time'
+          name='time'
           onChange={this.handleChange}
           value={this.state.time}
         />
         <br />
         <br />
 
-        <button type="submit" onClick={this.handleSubmit}>
+        <button type='submit' onClick={this.handleSubmit}>
           Add Event
         </button>
       </form>
