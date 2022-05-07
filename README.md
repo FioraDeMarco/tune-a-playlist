@@ -4,7 +4,7 @@ Soundaathon is a hypothetical platform for underground musicians and small music
 
 Soundaathon allows you to be able to see your location as well as any events in your local area. It displays venues which are within a 10 mile radius, and further. 
 
-Soundaathon allows you to add events to the map.
+Soundaathon allows artists to add events to the map.
 
 Soundaathon was made using leaflet, react, react-leaflet, and heroku for deployment.
 
