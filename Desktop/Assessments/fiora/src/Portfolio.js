@@ -17,10 +17,7 @@ export class Portfolio extends React.Component {
             </div>
             <div>
               <Link to='/App'>
-                <div
-                  className='portfolio-name'
-                  style={{ textDecoration: "none" }}
-                >
+                <div className='name' style={{ textDecoration: "none" }}>
                   Fiora De Marco ~ Software Engineer
                 </div>
               </Link>
@@ -40,37 +37,35 @@ export class Portfolio extends React.Component {
           </div> */}
           <br />
           <div className='container'>
-            <div className='portfolio-name'>Projects: </div>
+            <div className='name'>Projects: </div>
             <br />
             <div className='links'>
               <a href='https://gittogether-fsa.herokuapp.com'>GitTogether</a>
             </div>
             <br />
-            Capstone | Group Project | Coding Collaboration Platform
+            Capstone project: GitTogether | Software Developer |Coding
+            Collaboration Platform
             <br />
-            GitTogether is a RESTful Application built with React and Supabase
-            that allows users to seek peers to work on projects with and seek
-            projects to work on with fellow software developers. It encourages
-            inspiration and collaboration in a social environment linked with
-            Github. Building this app required manipulation of the UI using
-            React-Redux and React hooks.
+            ● RESTful Application built with React and Supabase that allows
+            users to seek peers to work on projects with and to seek projects to
+            work on with fellow software developers in a social environment
+            linked with Github
             <br />
+            ● Manipulated UI using React-Redux and React hooks
+            <br />
+            ● Incorporated chatting and posting capabilities though a supabase,
+            postgres database and nested components in React
             <br />
             ● Tech stack: Supabase, Ockokit, React-Redux, Heroku for deployment
             <br />
             <div className='picture'>
-              <br />
-              <br />
               <img src={require("./gitTogether5.png")} id='image' alt='2' />
-              <br />
-              <br />
-              ● User can post comments on any project.
-              <br />
               <br />
               <img src={require("./gitTogether1.png")} id='image' alt='2' />
               <br />
               <br />
-              ● User can chat with other users via the chatroom.
+              ● Incorporated chatting and posting capabilities though a
+              supabase, postgres database and nested components in React
               <br />
               <br />
               <img src={require("./gitTogether2.png")} id='image' alt='yo' />
@@ -87,36 +82,23 @@ export class Portfolio extends React.Component {
               <a href='https://soundaathon-app.herokuapp.com/'>Soundathon</a>
             </div>
             <br />
-            Hackathon Project | Sole Developer |
+            Soundathon/Hackathon | Sole Developer |
             https://soundaathon-app.herokuapp.com/
             <br />
+            ● Single Page Application
             <br />
-            Soundathon is a Single Page Application built with React and Leaflet
-            that allows users to view music events in their area based on their
-            location. Soundathon displays venues which are within a 10 mile
-            radius, and further.
+            ● App allows users to view music events in their local area based on
+            their location App displays venues which are within a 10 mile
+            radius, and further
             <br />
             ● Tech stack: Leaflet, React, React-leaflet, Heroku for deployment
-            <br />
-            <br />
-            ● Platform for underground artists and small music venues.
-            <br />
             <br />
             <div className='picture'>
               <img src={require("./soundathon1.png")} id='image' alt='2' />
               <br />
-              ● User can access their location.
-              <br />
-              <br />
               <img src={require("./soundathon2.png")} id='image' alt='2' />
               <br />
-              ● Local musical gems get recognition!
-              <br />
-              <br />
               <img src={require("./soundathon4.png")} id='image' alt='2' />
-              <br />
-              ● Artists can add events to the map.
-              <br />
               <br />
               <img src={require("./soundathon3.png")} id='image' alt='2' />
             </div>
@@ -127,27 +109,19 @@ export class Portfolio extends React.Component {
               </a>
             </div>
             <br />
-            Best Yarn (Grace-Shopper) | Group Project | E-Commerce Platform
+            Best Yarn (Grace-Shopper) | Group project | E-Commerce Platform
             <br />
-            Best Yarn is a RESTful e-commerce app built with React, Express and
-            Sequelize. Building this app required the development of a
-            persistent shopping cart which utilized Postico for data storage.
-            ~https://polar-bayou-43017.herokuapp.com/products
-            <br />
-            <br />
-            ● Users can shop for top notch yarn!
-            <br />
+            ● RESTful e-commerce app built with React, Express and Sequelize
+            <br />● Developed a persistent shopping cart utilizing Postico to
+            store data ~https://polar-bayou-43017.herokuapp.com/products
             <br />
             <div className='picture'>
               <img src={require("./GraceShopper.png")} id='image' alt='2' />
             </div>
             <br />
-            <div className='portfolio-name'>
-              <a href='mailto:fiorademarco7@gmail.com'>
-                Like to chat? Send me an email!
-                <div className='name'>fiorademarco7@gmail.com</div>
-              </a>
-            </div>
+            <a href='mailto:fiorademarco7@gmail.com?body=My custom mail body'>
+              Like to chat? Send me an email! fiorademarco7@gmail.com
+            </a>
           </div>
         </div>
       </div>

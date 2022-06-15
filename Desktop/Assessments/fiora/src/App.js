@@ -12,9 +12,7 @@ function App(props) {
             <a href='https://www.linkedin.com/in/fiorademarco'>Linkedin</a>
           </div>
           <div>
-            <div className='portfolio-name'>
-              Fiora De Marco ~ Software Engineer
-            </div>
+            <div className='name'>Fiora De Marco ~ Software Engineer</div>
             {/* <br />
             <p>Software Engineer</p> */}
           </div>
@@ -27,7 +25,7 @@ function App(props) {
       <div className='display-flex'>
         <br />
         <br />
-        <div className='portfolio-name'>
+        <div className='name'>
           <Link to='/Portfolio'>Portfolio</Link>
         </div>
         <div className='tile'>
@@ -38,7 +36,7 @@ function App(props) {
           <div className='container'>
             {/* <Link to='/Portfolio'> */}
             Hi, I'm Fiora! I'm a NYC native who loves live music, traveling, and
-            watching the Yankees win. Having studied architecture, I have a
+            watching the Yankee win. Having studied architecture, I have a
             background in design and an understanding of how different
             elements/components can work together optimally to create a good web
             design and user experience. I love the sense of accomplishment I get
@@ -52,14 +50,14 @@ function App(props) {
             </Link> */}
             <br />
             <br />
-            <div className='portfolio-name'>
-              <a href='mailto:fiorademarco7@gmail.com'>
-                Like to chat? Send me an email!
-                <div className='name'>fiorademarco7@gmail.com</div>
-              </a>
-            </div>
+            <a href='mailto:fiorademarco7@gmail.com?body=My custom mail body'>
+              Like to chat? Send me an email! fiorademarco7@gmail.com
+            </a>
           </div>
         </div>
+        {/* <div className='name'>
+          <Link to='/Portfolio'>Portfolio</Link>
+        </div> */}
       </div>
     </div>
   );
