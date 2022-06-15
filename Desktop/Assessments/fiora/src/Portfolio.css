@@ -70,3 +70,8 @@
   font-size: 35px;
   color: purple;
 }
+.name {
+  font-size: 35px;
+  justify-content: center;
+  border: 25px;
+}
